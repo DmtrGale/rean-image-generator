@@ -132,6 +132,7 @@ function drawMonthImage() {
     var theMonth = monthNames[document.getElementById('monthsSelect').value];
     temp = eliminateBadDays(theMonth, temp);
     temp = String(temp).padStart(2, '0');
+    alert(temp);
     drawFullImage('year', document.getElementById('monthsSelect').value, temp.charAt(0), temp.charAt(1));
 }
 
@@ -162,5 +163,6 @@ document.getElementById('dayInput').addEventListener('change', drawMonthImage())
 
 var iconNumber = day % 3;
 document.getElementById('iconLink').href = 'img/icons/' + iconNumber + '.ico';
+
 
 //snooPINGAS usual, I see?
