@@ -27,7 +27,7 @@ select {
     border-style: solid;
     border-radius: 10px;
     text-align: center;
-    font-size: calc(13px + 0.390625vw);
+    font-size: calc(16px + 0.390625vw);
     width: 114px;
     padding: 7px;
 }
@@ -40,7 +40,7 @@ input {
     border-radius: 10px;
     border-color: #689da5;
     text-align: center;
-    font-size: calc(13px + 0.390625vw);
+    font-size: calc(16px + 0.390625vw);
     padding: 7px;
     width: 96px;
 }
@@ -61,7 +61,7 @@ input[type=number] {
 
 button {
     font-family: cuprum, Arial, Helvetica, sans-serif;
-    font-size: calc(10px + 0.390625vw);
+    font-size: calc(16px + 0.390625vw);
     border: 0;
     height: fit-content;
     padding: 12px;
@@ -70,7 +70,6 @@ button {
     margin: 5px;
     color: white;
     text-decoration: none;
-    font-size: calc(16px + 0.390625vw);
     font-weight: 500;
     border-radius: 70px;
     box-shadow: 1px 2px 0px rgba(0, 50, 60, 1);
@@ -212,6 +211,7 @@ button:active {
 }
 
 .selector-text {
+    font-size: calc(16px + 0.390625vw);
     text-shadow: 1px 1px 0px black;
 }
 
@@ -366,7 +366,7 @@ button:active {
     font-weight: 500;
 }
 
-@media (max-width: 1185px) {
+@media (max-width: 1185px), (orientation: portrait) {
     .main-container {
         width: 90%;
         grid-template-columns: 1fr;
@@ -393,6 +393,32 @@ button:active {
         height: 100%;
         width: 2px;
         background: linear-gradient(180deg, transparent 0%,#87703e 3%, #87703e 4%, #fdf2b2 14%, #c4b36d 17%, #87703e 19%,#87703e 30%, #c4b36d 33%, #fdf2b2 38%, #fdf2b2 72%, #c4b36d 86%, #87703e 90%, #c4b36d 92%, #fdf2b2 94%, #87703e 96%, transparent 100%);
+    }
+}
+
+@media (orientation: portrait) {
+    body {
+        font-size: calc(26px + 0.78125vh);
+    }
+
+    select, input, button, .selector-text, .download-button {
+        font-size: calc(32px + 0.78125vh);
+    }
+
+    .main-container > .header {
+        font-size: calc(42px + 0.78125vh);
+    }
+
+    .art-by {
+        margin-bottom: calc(6px + 0.78125vh);
+    }
+
+    .pfp {
+        height: calc(50px + 0.78125vh);
+    }
+
+    .website-link {
+        height: calc(34px + 0.78125vh);
     }
 
 }
