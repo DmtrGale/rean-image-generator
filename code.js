@@ -75,8 +75,6 @@ function drawFullImage(weekOrYear, dayOrMonthNumber, leftNumber, rightNumber) {
     } else if (weekOrYear == 'year') {
         ctx.drawImage(yearImg, modeOffsetX,modeOffsetY);
         ctx.drawImage(months[dayOrMonthNumber], monthOffsetX, monthOffsetY);
-        alert(leftNumber);
-        alert(String(leftNum[leftNumber].src));
         ctx.drawImage(leftNum[leftNumber], leftNumOffsetX, leftNumOffsetY);
         ctx.drawImage(rightNum[rightNumber], rightNumOffsetX, rightNumOffsetY);
     } else {
@@ -167,4 +165,5 @@ document.getElementById('iconLink').href = 'img/icons/' + iconNumber + '.ico';
 
 
 //snooPINGAS usual, I see?
+
 
