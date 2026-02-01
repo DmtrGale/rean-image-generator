@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rean Image Generator</title>
+        <link id="iconLink" rel="icon" type="image/x-icon" href="#">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="loadTodayWeekDayImage()">
+        <div class="main-container">
+            <div class="top-bar"></div>
+            <div class="top-line"></div>
+            <div class="header">
+                <p class="header-text">Rean Image Generator</p>
+                <div class="gold-line"></div>
+            </div>
+            <div class="main-content">
+                <canvas class="rean-image" id="reanImage" width="2000px" height="1562px">Your browser doesn't support canvas.</canvas>
+                <a class="download-button" onclick="downloadImage()" id="downloadButton" href="" download="Rean Image">Download the Rean</a>
+            </div>
+            <div class="left-sidebar">
+                <div class="week-wrapper">
+                    <div class="buttons-wrapper">
+                        <button class="weekDayButton" value="1">Monday</button>
+                        <button class="weekDayButton" value="2">Tuesday</button>
+                        <button class="weekDayButton" value="3">Wednesday</button>
+                        <button class="weekDayButton" value="4">Thursday</button>
+                        <button class="weekDayButton" value="5">Friday</button>
+                        <button class="weekDayButton" value="6">Saturday</button>
+                        <button class="weekDayButton" value="0">Sunday</button>
+                    </div>
+                </div>
+                <div class="gold-line-2"></div>
+                <div class="month-wrapper">
+                    <div>
+                        <button class="todayMonthButton">Today</button>
+                    </div>
+                    <div class="selector">
+                        <p class="selector-text">Month:</p>
+                        <select id="monthsSelect" name="months">
+                            <option value="0">January</option>
+                            <option value="1">February</option>
+                            <option value="2">March</option>
+                            <option value="3">April</option>
+                            <option value="4">May</option>
+                            <option value="5">June</option>
+                            <option value="6">July</option>
+                            <option value="7">August</option>
+                            <option value="8">September</option>
+                            <option value="9">October</option>
+                            <option value="10">December</option>
+                            <option value="11">November</option>
+                        </select>
+                    </div>
+                    <div class="selector">
+                        <p class="selector-text">Day:</p>
+                        <input id='dayInput' type="number">
+                    </div>
+                    <button onclick="drawMonthImage()">Draw</button>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="gold-line"></div>
+                <div class="art-by">
+                    <p class="art-by-text">Art by</p> 
+                    <img class="pfp" src="img/alyossan_pfp.jpg" alt="Alyossan's PFP"> 
+                    <span class="name">Atelier Alyssa</span>
+                    <p class="art-by-text">:</p>
+                </div>
+                <div class="link-div">
+                    <a href="https://alyossan.art" target="_blank" class="website-link">
+                        <img src="img/star.png" alt="Website Logo" class="link-img">
+                        <span class="link-text">alyossan.art</span>
+                    </a>
+                    <a href="https://bsky.app/profile/alyossan.art" target="_blank" class="website-link">
+                        <img src="img/Bluesky_Logo.svg" alt="Bluesky Logo" class="link-img">
+                        <span class="link-text">bsky/alyossan.art</span>
+                    </a>
+                </div>
+            </div>
+            <div class="bottom-line"></div>
+            <div class="bottom-bar"></div>
+        </div>
+        <script src="code.js"></script>
+    </body>
+</html>
