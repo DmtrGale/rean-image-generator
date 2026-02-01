@@ -75,6 +75,8 @@ function drawFullImage(weekOrYear, dayOrMonthNumber, leftNumber, rightNumber) {
     } else if (weekOrYear == 'year') {
         ctx.drawImage(yearImg, modeOffsetX,modeOffsetY);
         ctx.drawImage(months[dayOrMonthNumber], monthOffsetX, monthOffsetY);
+        alert(leftNumber);
+        alert(String(leftNum[leftNumber].src));
         ctx.drawImage(leftNum[leftNumber], leftNumOffsetX, leftNumOffsetY);
         ctx.drawImage(rightNum[rightNumber], rightNumOffsetX, rightNumOffsetY);
     } else {
@@ -132,7 +134,6 @@ function drawMonthImage() {
     var theMonth = monthNames[document.getElementById('monthsSelect').value];
     temp = eliminateBadDays(theMonth, temp);
     temp = String(temp).padStart(2, '0');
-    alert(temp);
     drawFullImage('year', document.getElementById('monthsSelect').value, temp.charAt(0), temp.charAt(1));
 }
 
@@ -166,3 +167,4 @@ document.getElementById('iconLink').href = 'img/icons/' + iconNumber + '.ico';
 
 
 //snooPINGAS usual, I see?
+
